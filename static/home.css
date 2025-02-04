@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+    font-family: 'Comic Sans MS', serif;
+    background-color: aqua;
+}
+
+img {
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+img:hover {
+    transform: scale(1.2); /* Scale the image to 120% of its original size */
+}
