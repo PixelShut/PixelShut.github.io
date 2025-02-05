@@ -36,3 +36,11 @@ a {
 a:hover {
     color: #8209e5;
 }
+
+/* The main section under the navbar */
+.main {
+    /* Centers the stuff remove if you dont want*/
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
