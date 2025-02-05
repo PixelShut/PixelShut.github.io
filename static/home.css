@@ -37,8 +37,35 @@ a:hover {
     color: #8209e5;
 }
 
-/* The main section under the navbar */
 .main {
+    /* Centers the stuff remove if you dont want*/
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-box {
+    background-color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: transform .2s;
+    font-family: 'Comic Sans MS';
+}
+
+.intro-box:hover {
+    color: #8209e5;
+    transform: scale(1.5);
+}
+
+.hrline {
+    width: auto;
+    background-color: pink;
+    border: none;
+    height: 10px;
+}
+
+.footer {
     /* Centers the stuff remove if you dont want*/
     max-width: fit-content;
     margin-left: auto;
