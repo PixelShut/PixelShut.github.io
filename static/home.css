@@ -46,3 +46,40 @@ h1 {
     width: 100px;
     height: 60px;
 }
+
+.main {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    display: flex;
+    animation: scrollImage 10s linear infinite;
+}
+
+.image1 {
+    height: 250px;
+    margin-right: 0;
+}
+
+@keyframes scrollImage {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.main {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
