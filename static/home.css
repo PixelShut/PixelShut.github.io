@@ -57,29 +57,22 @@ h1 {
 
 .image-container {
     display: flex;
-    animation: scrollImage 10s linear infinite;
+    width: max-content;  /* Makes sure images are not clipped */
+    animation: scrollImage 16s linear infinite; /* Adjust animation duration */
 }
 
 .image1 {
     height: 250px;
-    margin-right: 0;
+    width: 250px; /* Make sure images are the same size */
+    object-fit: cover; /* Ensures proper scaling of images */
 }
 
+/* Keyframes for scrolling animation */
 @keyframes scrollImage {
     0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(100%);
+        transform: translateX(0); /* Start at the beginning */
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(-100%); /* Scroll to the end */
     }
-}
-
-
-.main {
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
 }
