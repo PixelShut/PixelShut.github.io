@@ -68,10 +68,10 @@ h2 {
 
 /* Keyframes for scrolling animation */
 @keyframes scrollImage {
-    100% {
+    0% {
         transform: translateX(0); /* Start at the beginning */
     }
-    0% {
+    100% {
         transform: translateX(-100%); /* Scroll to the end */
     }
 }
