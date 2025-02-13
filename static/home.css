@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 body {
-    background-color: #1a1a1a;
+    background-color: #141414;
     font-family: 'Nunito Sans', sans-serif;
     color: rgb(255, 255, 255);
     margin: 0;
-    user-select: none;
     padding: 0;
 }
 
@@ -38,7 +37,7 @@ a:hover {
     color: #8209e5;
 }
 
-h2 {
+h1 {
     font-size: 50px;
     font-family: 'Comic Sans MS';
 }
@@ -49,9 +48,11 @@ h2 {
 }
 
 .main {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
     position: relative;
-    text-align: center;
 }
 
 .image-container {
@@ -68,44 +69,10 @@ h2 {
 
 /* Keyframes for scrolling animation */
 @keyframes scrollImage {
-    0% {
+    100% {
         transform: translateX(0); /* Start at the beginning */
     }
-    100% {
+    0% {
         transform: translateX(-100%); /* Scroll to the end */
     }
-}
-/* Enhanced football appearance to make it look like a real football */
-/* Soccer ball styles */
-.football {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    border: 5px solid black;
-    background-image: radial-gradient(circle, #fff 30%, #000 30%, #000 50%, #fff 50%, #fff 70%, #000 70%, #000 90%, #fff 90%);
-    background-size: 20px 20px; /* Hexagonal pattern */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adding a shadow for depth */
-    cursor: pointer; /* Change cursor to pointer when hovered over */
-    transition: transform 0.2s ease; /* Smooth transformation */
-}
-
-/* Optional: Slight hover effect to give it a cool interactive feeling */
-.football:hover {
-    transform: scale(1.1); /* Slightly enlarge the ball on hover */
-}
-
-/* Optional: Adding some rotation for fun */
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.football:hover {
-    animation: spin 1s linear infinite; /* Make the ball spin when hovered */
 }
