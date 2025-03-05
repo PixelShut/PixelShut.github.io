@@ -12,6 +12,16 @@ body {
     padding: 0;
 }
 
+.vertical-line {
+    position: absolute;
+    top: 0;
+    left: 15%; /* Position it at 1/4th of the page width */
+    width: 4px; /* Adjust the thickness of the line */
+    height: 100%; /* Make it span the entire height of the page */
+    background-color: #fff; /* Color of the vertical line */
+}
+
+
 nav {
     background-color: #1f1f1f;
     padding: 1rem;

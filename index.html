@@ -15,14 +15,50 @@
     </ul>
 </nav>
 <div class="main">
-<h1>welcome guys</h1>
-<h3>I am very very very cool!!</h3>
+    <h1>welcome guys</h1>
+    <h3>I am very very very cool!!</h3>
 </div>
+<div class="vertical-line"></div>
 <button type="button" onclick="secret()">❤️</button>
+<button type="button" onclick="sendFeedback()">Send Feedback</button>
 </body>
 <script>
 function secret() {
     alert("Dylan(a brave and loyal fellow companion) loves one whose name starts with L and ends with ayan!! They love eachother very much and lived happily ever after 😍!!15/11/24 best day for them am i right? ");
 }
+
+function sendFeedback() {
+    // Prompt the user to enter their feedback
+    const feedback = prompt("Please enter your feedback:");
+
+    // Check if feedback is not empty
+    if (feedback) {
+        // Prepare the payload to send to the Discord webhook
+        const payload = {
+            content: feedback
+        };
+
+        // Send the feedback to the webhook using fetch
+        fetch('https://discord.com/api/webhooks/1345828298747547739/YVUKINKtIGw4GMATGt9ZDXjsgMYbYp7dsnttzUOSJOl-rw_I76N0Fth9kBnefosvyFlv', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Feedback sent successfully:', data);
+            alert('Thank you for your feedback!');
+        })
+        .catch(error => {
+            console.error('Error sending feedback:', error);
+            alert('There was an error submitting your feedback. Please try again later.');
+        });
+    } else {
+        alert('Feedback cannot be empty.');
+    }
+}
+
 </script>
 </html>
