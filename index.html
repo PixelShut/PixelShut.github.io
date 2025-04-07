@@ -3,62 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixelshut</title>
-    <link rel="stylesheet" href="/static/home.css">
+    <meta name="description" content="Ninjago - The world of ninja warriors, legendary battles, and ancient adventures">
+    <title>Ninjago Universe</title>
+    <link rel="stylesheet" href="static/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/videos">Videos</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
-</nav>
-<div class="main">
-    <h1>welcome guys</h1>
-    <h3>I am very very very cool!!</h3>
-</div>
-<div class="vertical-line"></div>
-<button type="button" onclick="secret()">❤️</button>
-<button type="button" onclick="sendFeedback()">Send Feedback</button>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Ninjago Universe</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#episodes">Episodes</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#story">Ninjago Story</a></li>
+                <li><a href="#about">About Ninjago</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Welcome to the Ninjago Universe</h1>
+            <p>Explore the world of ninjas, epic battles, and legendary heroes!</p>
+            <a href="#episodes" class="btn-main">Watch Episodes</a>
+        </div>
+    </section>
+
+    <!-- Episodes Section -->
+    <section id="episodes" class="episodes-section">
+        <h2>Our Legendary Episodes</h2>
+        <div class="episode-grid">
+            <div class="episode-card">
+                <img src="https://img.youtube.com/vi/some-video-id/maxresdefault.jpg" alt="Ninjago Episode 1">
+                <h3><a href="https://www.youtube.com/watch?v=some-video-id" target="_blank">The Rise of the Serpentine</a></h3>
+                <img src="https://i.giphy.com/some-gif.gif" alt="Episode 1 Clip">
+            </div>
+            <div class="episode-card">
+                <img src="https://img.youtube.com/vi/some-other-id/maxresdefault.jpg" alt="Ninjago Episode 2">
+                <h3><a href="https://www.youtube.com/watch?v=some-other-id" target="_blank">The Great Devourer Awakens</a></h3>
+                <img src="https://i.giphy.com/another-gif.gif" alt="Episode 2 Clip">
+            </div>
+            <!-- Add more episodes here -->
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="characters-section">
+        <h2>Meet the Ninjago Warriors</h2>
+        <div class="characters-grid">
+            <div class="character-card">
+                <img src="https://example.com/lloyd.jpg" alt="Lloyd Garmadon">
+                <h3>Lloyd Garmadon</h3>
+                <p>The Green Ninja, destined to defeat the evil forces of Ninjago.</p>
+            </div>
+            <div class="character-card">
+                <img src="https://example.com/jay.jpg" alt="Jay Walker">
+                <h3>Jay Walker</h3>
+                <p>The blue ninja of lightning, known for his quick wit and agility.</p>
+            </div>
+            <!-- Add more characters here -->
+        </div>
+    </section>
+
+    <!-- Ninjago Story Section -->
+    <section id="story" class="story-section">
+        <h2>The Legend of Ninjago</h2>
+        <p>The world of Ninjago was created by the ancient First Spinjitzu Master, and it has been ruled by various powerful figures over the centuries. It is a land of elemental warriors, magical artifacts, and legendary battles against the forces of darkness. Through the ages, many heroes have risen to defend the world from threats both ancient and modern.</p>
+        <p>At the heart of the story are the ninja, each wielding a unique elemental power and trained in the ancient art of Spinjitzu. Their journey is filled with battles, challenges, and quests to maintain peace and protect their world. This is the story of their triumphs, losses, and legendary adventures that have shaped the fate of Ninjago.</p>
+    </section>
+
+    <!-- About Ninjago Section -->
+    <section id="about" class="about-section">
+        <h2>About Ninjago</h2>
+        <p>Ninjago is a long-running animated television series that was first introduced by LEGO. It follows the adventures of a group of young ninja warriors who battle various evil forces threatening their world. The series is known for its captivating storylines, rich character development, and high-paced action sequences.</p>
+        <p>Over the years, Ninjago has become one of the most successful franchises in LEGO's history, expanding into movies, video games, and a large collection of toys. The series has been praised for its ability to blend humor, heart, and action, creating a lasting legacy in the world of animation and pop culture.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ninjago Universe. All rights reserved.</p>
+    </footer>
+
 </body>
-<script>
-function secret() {
-    alert("Dylan(a brave and loyal fellow companion) loves one whose name starts with L and ends with ayan!! They love eachother very much and lived happily ever after 😍!!15/11/24 best day for them am i right? ");
-}
-
-function sendFeedback() {
-    // Prompt the user to enter their feedback
-    const feedback = prompt("Please enter your feedback:");
-
-    // Check if feedback is not empty
-    if (feedback) {
-        // Prepare the payload to send to the Discord webhook
-        const payload = {
-            content: feedback
-        };
-
-        // Send the feedback to the webhook using fetch
-        fetch('https://discord.com/api/webhooks/1345828298747547739/YVUKINKtIGw4GMATGt9ZDXjsgMYbYp7dsnttzUOSJOl-rw_I76N0Fth9kBnefosvyFlv', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Feedback sent successfully:', data);
-            alert('Thank you for your feedback!');
-        })
-        .catch(error => {
-            console.error('Error sending feedback:', error);
-            alert('There was an error submitting your feedback. Please try again later.');
-        });
-    } else {
-        alert('Feedback cannot be empty.');
-    }
-}
-
-</script>
 </html>

@@ -1,62 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #1a1a1a;
-    background-image: url('/static/pixelshut.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: 'Nunito Sans', sans-serif;
-    color: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #212121;
+    color: white;
+    line-height: 1.6;
 }
 
-.vertical-line {
-    position: absolute;
-    top: 0;
-    left: 15%; /* Position it at 1/4th of the page width */
-    width: 4px; /* Adjust the thickness of the line */
-    height: 100%; /* Make it span the entire height of the page */
-    background-color: #fff; /* Color of the vertical line */
-}
-
-
-nav {
-    background-color: #1f1f1f;
-    padding: 1rem;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+header {
+    background-color: #333;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-li {
-    margin: 0 1rem;
-}
-
-a {
-    color: rgb(255, 255, 255);
+header .logo a {
+    color: #f39c12;
+    font-size: 2.5em;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #8209e5;
+nav ul li a:hover {
+    color: #f39c12;
 }
 
-.main {
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+/* Home Section */
+.home-section {
+    background-image: url('https://example.com/ninjago-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
 }
 
-button {
-    background: none;
+.home-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
 }
+
+.home-section p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e67e22;
+}
+
+/* Episodes Section */
+.episodes-section {
+    padding: 80px 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.episodes-section h2 {
+    font-size: 3em;
+    color: #f39c12;
+    margin-bottom: 40px;
+}
+
+.episode-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.episode-card {
+    width: 30%;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.episode-card img {
+    width: 100%;
+    border-bottom: 2px solid #f39c12;
+}
+
